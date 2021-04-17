@@ -1,12 +1,13 @@
 <!-- Showing detailed view of tracker -->
 <html>
     <head>
+                
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/home.css">
         <title>
             <%= title %>
         </title>
-        
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
-        <link rel="stylesheet" href="/css/home.css">
+
     </head>
     <body>
         <!-- <a href="/week">WeekView</a> -->
@@ -55,30 +56,32 @@
                                 </span> 
                             </div> 
                             <div id="toggler">
-                                <span style="float: right;"><%for(let j=0;j<7;j++ ) {%>
-                                    <span class="item" >   <%if(habits[i].status[j]==" "){%>
-                                    &nbsp;&nbsp; &nbsp;&nbsp; 
-                                    <i class="fa fa-ban" onclick="change(this)" id="none"  aria-hidden="true"> 
-                                    <input value="<%=habits[i].status[j]%>"  name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>  
-                                            
-                                    <%}%> 
-                                    <%  if(habits[i].status[j]=='done'){%>
-                    
-                                    &nbsp;&nbsp; &nbsp;&nbsp; 
-                                    <i class="fa fa-check" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i> 
-                                            
+                                    <span style="float: right;"><%for(let j=0;j<7;j++ ) {%>
+                                        <span class="item" >   <%if(habits[i].status[j]==" "){%>
+                                        &nbsp;&nbsp; &nbsp;&nbsp; 
+                                        <i class="fa fa-ban" onclick="change(this)" id="none"  aria-hidden="true"> 
+                                        <input value="<%=habits[i].status[j]%>"  name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>  
+                                                
                                         <%}%> 
-                                    <%  if(habits[i].status[j]=='notDone'){%>
+                                        <%  if(habits[i].status[j]=='done'){%>
+                        
+                                        &nbsp;&nbsp; &nbsp;&nbsp; 
+                                        <i class="fa fa-check" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i> 
+                                                
+                                            <%}%> 
+                                        <%  if(habits[i].status[j]=='notDone'){%>
+                        
+                                        &nbsp;&nbsp; &nbsp;&nbsp; 
+                                        <i name="dfdsf" class="fa fa-times" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>
+                                                
+                                        <%}%> 
+                                    </span>  
+                        
+            
+            
+                                    <%}%></span>
                     
-                                    &nbsp;&nbsp; &nbsp;&nbsp; 
-                                    <i name="dfdsf" class="fa fa-times" onclick="change(this)" aria-hidden="true"><input value="<%=habits[i].status[j]%>" name="status<%=i%>" style="display:none; width: 10px; height: 10px;" type="text" aria-hidden="true"></i>
-                                            
-                                    <%}%> 
-                                </span>  
-                    
-        
-         
-                                <%}%></span>
+                                <!-- <input type="checkbox"> -->
                             </div>                          
                         </div>
 
@@ -86,6 +89,8 @@
                 <%}%>
             </ul>
         </div>
-        <script src="script.js"></script>
+        <!-- <script type="javascript" src="../assest/js/script.js"></script> -->
+        <script src="/js/script.js"></script>  
+
     </body>
 </html>

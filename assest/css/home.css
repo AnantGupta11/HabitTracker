@@ -51,5 +51,24 @@ li{
 #toggler{
     /* align-items: center; */
     /* padding-bottom: 10px; */
-    margin-top: 5px;
+    margin-top: 10px;
+    /* cursor: pointer; */
+    padding-right: 5px;
 }
+.fa-check{
+    /* completed habit icon color */
+    color: greenyellow;
+}
+
+.fa-times{
+    /* not completed habit icon color */
+    color: red;
+}
+
+
+i{
+    cursor: pointer;
+}
+
+
+
