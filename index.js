@@ -1,11 +1,14 @@
 const express= require('express');
 const path=require('path');
-const router=require('./routes');
-// const mongoose=require('./config/mongoose');
-const port=8000;
 
+//importing router
+const router=require('./routes');
+
+const port=process.env.PORT || 8000;
+
+//importing database
 const db=require('./config/mongoose');
-const Habit=require('./models/habit');
+// const Habit=require('./models/habit');
 const app= express();
 
 // Set view Engine to ejs

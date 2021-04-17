@@ -6,6 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F0ZH00x8YVZI%2Fmaxresdefault.jpg&f=1&nofb=1");
 }
 #page-heading{
     background-color: azure;
@@ -15,10 +16,26 @@ body{
 #new-habit{
     justify-content: baseline;
 }
+.create-habit{
+    display: flex;
+    justify-content: center;
+}
+.new-habit >input{
+	height: 5vh;
+	width: inherit;
+	font-size: 1.2rem;
+	font-weight: 800;
+	
+}
+#btn{
+    height: 4vh;
+    width: 8vw;
+}
 #habit-list-container{
     /* background-color: lightgray; */
     width: 500px;
 }
+
 .habits{
     display: flex;
     flex-direction: row;
