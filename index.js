@@ -1,15 +1,21 @@
 const express= require('express');
+const app= express();
 const path=require('path');
-
-//importing router
-const router=require('./routes');
-
 const port=process.env.PORT || 8000;
-
+const expressLayouts=require('express-ejs-layouts');
 //importing database
 const db=require('./config/mongoose');
-// const Habit=require('./models/habit');
-const app= express();
+
+
+
+//middlewares
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('./assest'));
+
+app.use(expressLayouts);
+//extract styles and scripts from sub pages into the layout
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
 
 // Set view Engine to ejs
 app.set('view engine', 'ejs');
@@ -17,11 +23,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
-//middlewares
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static('assest'));
-
-app.use('/',router);
+app.use('/',require('./routes'));
 
 
 
